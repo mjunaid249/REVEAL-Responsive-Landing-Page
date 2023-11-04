@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primary-color: #2980b9;
+  --text-color: #1abc9c;
+  --white: #fff;
+}
+.pre-navbar {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 2rem;
+
+  border-bottom: 1px solid var(--text-color);
+}
+.left-pre-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.pre-navbar-link {
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+  font-size: 0.9rem;
+  gap: 0.3rem;
+  font-style: normal;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.pre-navbar-link:hover {
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  gap: 0.3rem;
+}
+.pre-navbar-mobile-icon {
+  color: var(--text-color);
+}
+.right-pre-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.pre-navbar-social-link {
+  color: black;
+
+  transition: all 0.2s ease;
+}
+.pre-navbar-social-link:hover {
+  color: var(--text-color);
+}
+
+/* Header  */
+
+.header {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  width: 100%;
+  height: 4rem;
+  left: 0;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.navbar-link {
+  color: black;
+  transition: all 0.2s ease;
+}
+.navbar-link:hover {
+  color: var(--text-color);
+}
+.logo {
+  color: black;
+  font-size: 1.6rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo .logo-p-2 {
+  color: var(--text-color);
+}
+.mobile-navbar-btn {
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+#close {
+  display: none;
+}
+
+.home {
+  padding: 10rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-direction: column;
+}
+.home-heading {
+  font-size: 3.2rem;
+  text-align: center;
+  color: var(--primary-color);
+}
+.home-heading-underline {
+  color: var(--text-color);
+  text-decoration: underline;
+  text-underline-offset: 0.7rem;
+}
+.home-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.home-btn-1 {
+  border: 2px solid var(--primary-color);
+  color: white;
+  background: var(--primary-color);
+  padding: 0.6rem 1.4rem;
+  transition: all 0.3s ease;
+}
+.home-btn-1:hover {
+  color: var(--primary-color);
+  background: transparent;
+  cursor: pointer;
+}
+.home-btn-2 {
+  border: 2px solid var(--text-color);
+  color: white;
+  transition: all 0.3s ease;
+  background: var(--text-color);
+  padding: 0.6rem 1.4rem;
+}
+.home-btn-2:hover {
+  color: var(--text-color);
+  background: transparent;
+  cursor: pointer;
+}
+
+@media (max-width: 750px) {
+  .header {
+    margin-top: 3rem;
+  }
+  .mobile-navbar-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+  }
+  .navbar {
+    background: var(--primary-color);
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    transition: all 0.3s linear;
+    transform: translateY(-100%);
+    visibility: hidden;
+  }
+  .navbar-list {
+    flex-direction: column;
+  }
+  .navbar-link {
+    color: white;
+  }
+  .active .navbar {
+    transform: translateY(0);
+    visibility: visible;
+  }
+  .active .mobile-navbar-btn {
+    color: white;
+  }
+  .active #close {
+    display: block;
+  }
+  .active #open {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  html {
+    font-size: 90%;
+  }
+  .header {
+    margin-top: 4rem;
+  }
+}
+@media (max-width: 470px) {
+  html {
+    font-size: 80%;
+  }
+  .home-heading {
+    font-size: 2.4rem;
+  }
+  .home-btns {
+    flex-direction: column;
+  }
+  .pre-navbar {
+    flex-direction: column;
+    height: 4rem;
+  }
+}
+@media (max-width: 320px) {
+  .header {
+    margin-top: 6rem;
+  }
+  .pre-navbar {
+    padding: 3rem;
+  }
+  .left-pre-navbar {
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+}
